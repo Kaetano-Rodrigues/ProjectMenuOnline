@@ -4,10 +4,20 @@
         <title> Restaurante - Seja Bem-Vindo</title>
         <link rel = "stylesheet" href = "./CSS/bootstrap.min.css"/>
         <link rel = "stylesheet" href = "./CSS/fontawesome.css"/>
+        <link rel = "stylesheet" href="./CSS/animate.css"/>
         <link rel = "stylesheet" href = "./CSS/main.css"/>
     </head>
 
     <body>
+
+        <div class="container-mensagens" id="container-mensagens">
+
+        </div>
+        
+        <a class="botao-carrinho hidden">
+            <div class="badge-total-carrinho">0</div>
+            <i class="fa fa-shopping-bag"></i>
+        </a>
 
         <section class ="header">
             <div class="container">
@@ -37,6 +47,7 @@
                         </ul>
                         <a class="btn btn-white btn-icon">
                             Meu carrinho <span class="icon">
+                                <div class=" container-total-carrinho badge-total-carrinho hidden">0</div>
                                 <i class="fa fa-shopping-bag"></i>
                             </span>
                         </a>    
@@ -178,7 +189,7 @@
                         <a id="menu-bebidas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('bebidas')">
                             <i class="fas fa-cocktail"></i> &nbsp;Bebidas
                         </a>
-                        <a id="menu-sobremesa" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
+                        <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
                             <i class="fas fa-ice-cream"></i> &nbsp;Sobremesas
                         </a>
                     </div>
