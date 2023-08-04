@@ -367,44 +367,44 @@ cardapio.metodos = {
         let endereco = $("#txtEndereco").val().trim();
         let bairro = $("#txtBairro").val().trim();
         let cidade = $("#txtCidade").val().trim();
-        let uf = $("ddlUf").val().trim();
+        let uf = $("ddlUf").val();
         let numero = $("#txtNumero").val().trim();
         let complemento = $("#txtComplemento").val().trim();
 
         if(cep.length <= 0){
             cardapio.metodos.mensagem('Informe o CEP, por favor. ');
             $("#txtCEp").focus();
-            return;
+            return
         }
 
         if(endereco.length <= 0){
             cardapio.metodos.mensagem('informe o Endereco, por favor. ');
             $("#txtEndereco").focus();
-            return;
+            return
         }
 
         if(bairro.length <= 0){
             cardapio.metodos.mensagem('Informe o Bairro, por favor. ');
             $("#txtBairro").focus();
-            return;
+            return
         }
 
         if(cidade.length <= 0){
             cardapio.metodos.mensagem('Informe a Cidade, por favor. ');
             $("#txtCidade").focus();
-            return;
+            return
         }
 
         if(uf == "-1"){
             cardapio.metodos.mensagem('Informe a UF, por favor. ');
             $("#ddlUf").focus();
-            return;
+            return
         }
 
         if(numero.length <= 0){
             cardapio.metodos.mensagem('Informe o Numero, por favor. ');
             $("#txtNumero").focus();
-            return;
+            return
         }
 
         MEU_ENDERECO = {
@@ -413,7 +413,7 @@ cardapio.metodos = {
             bairro: bairro,
             cidade: cidade,
             uf: uf,
-            nuemro: numero,
+            numero: numero,
             complemento: complemento
         }
 
