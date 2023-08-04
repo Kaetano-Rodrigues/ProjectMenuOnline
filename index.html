@@ -4,7 +4,7 @@
         <title> Restaurante - Seja Bem-Vindo</title>
         <link rel = "stylesheet" href = "./CSS/bootstrap.min.css"/>
         <link rel = "stylesheet" href = "./CSS/fontawesome.css"/>
-        <link rel = "stylesheet" href="./CSS/animate.css"/>
+        <link rel = "stylesheet" href = "./CSS/animate.css"/>
         <link rel = "stylesheet" href = "./CSS/main.css"/>
     </head>
 
@@ -70,11 +70,11 @@
                             <a class="btn btn-yellow mt-4 mr-3">
                                 Ver Cardápio
                             </a>
-                            <a href="#" class="btn btn-white btn-icon-left mt-4">
+                            <a href="#" class="btn btn-white btn-icon-left mt-4" id="btnLigar">
                                 <span class="icon-left">
                                     <i class="fa fa-phone"></i>
                                 </span>
-                                (XX) XXXXX-XXXX
+                                (15) 99123-4567
                             </a>
                         </div>
                     </div>
@@ -304,9 +304,9 @@
 
                         </div>
 
-                        <a class="btn btn-sm btn-white btn-social mr-3 active">1</a>
-                        <a class="btn btn-sm btn-white btn-social mr-3">2</a>
-                        <a class="btn btn-sm btn-white btn-social ">3</a>
+                        <a id="btnDepoimento-1" class="btn btn-sm btn-white btn-social mr-3 active" onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
+                        <a id="btnDepoimento-2" class="btn btn-sm btn-white btn-social mr-3" onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
+                        <a id="btnDepoimento-3" class="btn btn-sm btn-white btn-social " onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
 
                     </div>
                 </div>
@@ -329,7 +329,7 @@
                                         <br>
                                         Reserve sua data e horário de forma simples e rápida
                                     </p>
-                                    <a class="btn btn-yellow mt-4">
+                                    <a class="btn btn-yellow mt-4" href="#" id="btnReserva" target="_blank">
                                         Fazer reserva
                                     </a>
                                 </div>
@@ -490,22 +490,6 @@
 
                         <div class="col-12">
                             <div class="row" id="listaItensResumo">
-                                <div class="col-12 item-carrinho resumo">
-                                    <div class="img-produto-resumo">
-                                        <img src="./IMG/cardapio/churrasco/bbq-meat-lovers-special-for-10.36ca670fda4bfa783c2ea9165e068d26.jpg"/>
-                                    </div>
-                                    <div class="dados-produto">
-                                        <p class="title-produto-resumo">
-                                            <b>Nome do produto</b>
-                                        </p>
-                                        <p class="price-produto-resumo">
-                                            <b>R$ 60,00</b>
-                                        </p>
-                                    </div>
-                                    <p class="quantidade-produto-resumo">
-                                        x<b>3</b>
-                                    </p>
-                                </div>
                                 
                             </div>
                         </div>
@@ -522,10 +506,9 @@
                             </div>
                             <div class="dados-produto">
                                 <p class="texto-endereco">
-                                    <b id="resumoEndereco">Rua teste, 200, bairro teste</b>
+                                    <b id="resumoEndereco"></b>
                                 </p>
-                                <p class="cidade-endereco" id="cidadeEndereco">
-                                    Cidade-SP / 14711-000
+                                <p class="cidade-endereco" id="cidadeEndereco">   
                                 </p>
                             </div>
                         </div>
@@ -558,7 +541,7 @@
                     <a onclick="cardapio.metodos.resumoPedido()" class="btn btn-yellow float-right hidden" id="btnEtapaEndereco">
                         Revisar Pedido
                     </a>
-                    <a class="btn btn-yellow float-right hidden" id="btnEtapaResumo">
+                    <a href="#" class="btn btn-yellow float-right hidden" id="btnEtapaResumo" target="_blank">
                         Enviar Pedido
                     </a>
                     <a onclick="cardapio.metodos.voltarEtapa()"class="btn btn-white float-right mr-3 hidden" id="btnEtapaVoltar">
@@ -573,8 +556,11 @@
         <script type=" text/javascript" src="./JS/modernizr-3.5.0.min.js"></script>
         <script type=" text/javascript" src="./JS/bootstrap.min.js"></script>
         <script type=" text/javascript" src="./JS/popper.min.js"></script>
+        <script type=" text/javascript" src="./JS/wow.min.js"></script>
         <script type=" text/javascript" src="./JS/dados.js"></script>
         <script type=" text/javascript" src="./JS/app.js"></script>
+
+        <script>new WOW().init();</script>
 
     </body>
 
